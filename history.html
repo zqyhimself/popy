@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>剪贴板历史 · Popy</title>
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head-top">
+        <div class="brand">
+          <span class="dot"></span>
+          <h1>剪贴板历史</h1>
+          <span class="count" id="count">0</span>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="搜索文本 / 来源 / 标题..." />
+        <select id="filter-kind">
+          <option value="">全部类型</option>
+          <option value="copy">复制</option>
+          <option value="force-copy">强制复制</option>
+          <option value="markdown">Markdown</option>
+          <option value="quote">引用</option>
+          <option value="code">代码</option>
+          <option value="csv">CSV</option>
+          <option value="plain">纯文本</option>
+        </select>
+        <button id="export">导出 JSON</button>
+        <button id="clear" class="danger">清空</button>
+      </div>
+    </header>
+    <main id="list"></main>
+    <div id="empty" class="empty">还没有记录 — 去复制一段文字看看吧</div>
+    <script src="history.js"></script>
+  </body>
+</html>

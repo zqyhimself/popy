@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (should never be here, but just in case)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.zip
+*.crx
+*.pem

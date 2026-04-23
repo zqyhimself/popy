@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "Popy — 终极复制与剪贴板工具",
+  "short_name": "Popy",
+  "version": "2.0.0",
+  "description": "解除复制限制 · Markdown 复制 · 剪贴板历史 · 反反调试 · 隐藏文字揭示 · 超级选择浮动工具条。",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead",
+    "notifications"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Popy",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": { "service_worker": "background.js" },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["formatters.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["history.html", "options.html", "rules.json", "inject-main.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "force-copy": {
+      "suggested_key": { "default": "Alt+C" },
+      "description": "强制复制当前选区"
+    },
+    "copy-as-markdown": {
+      "suggested_key": { "default": "Alt+Shift+C" },
+      "description": "复制选区为 Markdown"
+    },
+    "reveal-hidden": {
+      "suggested_key": { "default": "Alt+Shift+H" },
+      "description": "揭示页面隐藏文字"
+    },
+    "open-history": {
+      "suggested_key": { "default": "Alt+Shift+V" },
+      "description": "打开剪贴板历史"
+    },
+    "toggle-site": {
+      "description": "切换当前站点启用（可在 chrome://extensions/shortcuts 设置）"
+    }
+  }
+}

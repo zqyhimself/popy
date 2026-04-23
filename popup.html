@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Popy</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="name">Popy</span>
+        <span class="ver">v2.0</span>
+      </div>
+      <button class="icon-btn" id="open-options" title="设置">⚙</button>
+    </header>
+
+    <section class="toggles">
+      <div class="row">
+        <div class="label">
+          <div class="title">全局启用</div>
+          <div class="sub">对所有网站生效</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="global-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="row">
+        <div class="label">
+          <div class="title">当前站点启用</div>
+          <div class="sub" id="host-label">--</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="site-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-num" id="stat-blocks">0</div>
+        <div class="stat-label">本页拦截</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" id="stat-history">0</div>
+        <div class="stat-label">历史条目</div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button class="action" data-action="open-history">📋 剪贴板历史</button>
+      <button class="action" data-action="reveal">👁 揭示隐藏</button>
+      <button class="action" data-action="copy-md">✨ 选区→MD</button>
+      <button class="action" data-action="open-options">⚙️ 更多设置</button>
+    </section>
+
+    <footer>
+      <div class="tip">Alt+C · Alt+Shift+C · Alt+Shift+H · Alt+Shift+V</div>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

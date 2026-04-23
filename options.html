@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Popy 设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <div class="brand">
+          <span class="dot"></span>
+          <h1>Popy 设置</h1>
+        </div>
+        <p class="sub">修改后新打开或刷新的页面生效</p>
+      </header>
+
+      <section class="card">
+        <h2>功能开关</h2>
+        <div id="features"></div>
+      </section>
+
+      <section class="card">
+        <h2>站点黑名单</h2>
+        <p class="hint">这些站点上不启用 Popy。每行一个 host，不带协议。（也会自动覆盖子域名。）</p>
+        <textarea id="disabled-sites" rows="6"
+          placeholder="docs.google.com&#10;example.com"></textarea>
+      </section>
+
+      <section class="card">
+        <h2>快捷键</h2>
+        <p class="hint">可在 <code>chrome://extensions/shortcuts</code> 修改。</p>
+        <table class="keys">
+          <tr><td>Alt+C</td><td>强制复制当前选区</td></tr>
+          <tr><td>Alt+Shift+C</td><td>复制选区为 Markdown</td></tr>
+          <tr><td>Alt+Shift+H</td><td>揭示隐藏文字</td></tr>
+          <tr><td>Alt+Shift+V</td><td>打开剪贴板历史</td></tr>
+          <tr><td>未设置</td><td>切换当前站点启用 (toggle-site)</td></tr>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>数据</h2>
+        <div class="btn-group">
+          <button id="export-settings">导出设置</button>
+          <button id="import-settings">导入设置</button>
+          <button id="reset-settings" class="danger">重置为默认</button>
+          <button id="clear-history" class="danger">清空剪贴板历史</button>
+          <a class="link-btn" id="open-history">打开剪贴板历史页 →</a>
+        </div>
+        <input id="import-file" type="file" accept="application/json" hidden />
+      </section>
+
+      <section class="card about">
+        <h2>关于</h2>
+        <p>Popy v2.0 — 终极复制与剪贴板工具</p>
+        <p class="hint">
+          本扩展只解除前端限制，不破解 DRM 或服务端加密。<br />
+          某些编辑器（Google Docs、腾讯文档、富文本所见即所得）使用虚拟光标，建议在「站点黑名单」中添加。
+        </p>
+      </section>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

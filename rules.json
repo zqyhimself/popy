@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "note": "示例默认规则。将这些 host 加入 options 页的站点黑名单即可禁用 Popy。",
+  "suggestedDisabled": [
+    "docs.google.com",
+    "sheets.google.com",
+    "slides.google.com",
+    "docs.qq.com",
+    "www.yuque.com",
+    "feishu.cn",
+    "larksuite.com",
+    "notion.so",
+    "www.notion.so"
+  ]
+}
