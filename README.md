@@ -153,7 +153,7 @@ The usual fix is an "Allow Copy" extension. Most of them:
 ### Development
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/zqyhimself/popy.git
 cd popy
 
 # Load it in Chrome:
@@ -306,7 +306,7 @@ PRs are welcome. Ground rules:
 ### 开发
 
 ```bash
-git clone <你的仓库地址>
+git clone https://github.com/zqyhimself/popy.git
 cd popy
 # 浏览器 chrome://extensions → 加载已解压 → 选择该目录
 # 修改后点击扩展卡片上的刷新图标即生效

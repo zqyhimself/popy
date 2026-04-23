@@ -18,11 +18,15 @@ header {
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; }
 .dot { width: 10px; height: 10px; border-radius: 50%; background: #2563eb; box-shadow: 0 0 8px rgba(37, 99, 235, 0.6); }
 .ver { font-size: 11px; color: #94a3b8; font-weight: 400; }
+.header-actions { display: flex; align-items: center; gap: 2px; }
 .icon-btn {
   background: none; border: none; font-size: 16px; cursor: pointer; color: #666;
   padding: 4px 8px; border-radius: 4px;
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none; line-height: 1;
 }
-.icon-btn:hover { background: #f1f5f9; }
+.icon-btn:hover { background: #f1f5f9; color: #1e293b; }
+.icon-btn svg { display: block; }
 
 .toggles { padding: 4px 14px; }
 .row {
@@ -78,7 +82,7 @@ footer { padding: 8px 14px 12px; border-top: 1px solid #eee; }
   .row + .row { border-top-color: #262626; }
   .sub, .stat-label, .tip, .ver { color: #a0a0a0; }
   .icon-btn { color: #a0a0a0; }
-  .icon-btn:hover { background: #2a2a2a; }
+  .icon-btn:hover { background: #2a2a2a; color: #e5e5e5; }
   .stats { background: #0f0f0f; border-color: #262626; }
   .action { background: #262626; color: #e5e5e5; }
   .action:hover { background: #333; }

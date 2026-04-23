@@ -80,6 +80,13 @@ button.danger:hover { background: #dc2626; }
 }
 
 .about p { margin: 4px 0; }
+.gh-link {
+  color: #2563eb; text-decoration: none;
+  display: inline-flex; align-items: center;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 13px;
+}
+.gh-link:hover { text-decoration: underline; }
 
 @media (prefers-color-scheme: dark) {
   body { background: #0a0a0a; color: #e5e5e5; }
