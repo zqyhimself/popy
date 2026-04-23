@@ -4,7 +4,6 @@
   "short_name": "Popy",
   "version": "2.0.0",
   "description": "解除复制限制 · Markdown 复制 · 剪贴板历史 · 反反调试 · 隐藏文字揭示 · 超级选择浮动工具条。",
-  "default_locale": "zh_CN",
   "permissions": [
     "storage",
     "scripting",
